@@ -43,12 +43,15 @@
       renderer="logarithmicDepthBuffer: true;"
       embedded
       arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: true;">
+	   <a-assets>
+    <video id="penguin-sledding" autoplay loop="true" src="videos/1.mp4"></video>
+  </a-assets>
       <!-- a-nft is the anchor that defines an Image Tracking entity -->
       <!-- on 'url' use the path to the Image Descriptors created before. -->
       <!-- the path should end with the name without the extension e.g. if file is trex.fset' the path should end with trex -->
       <a-nft
         type="nft"
-        url="desc/1"
+        url="identitycard/desc/1"
         smooth="true"
         smoothCount="10"
         smoothTolerance=".01"
@@ -60,6 +63,8 @@
                 position="0 0 0"
                 >
             </a-entity>
+			  <a-video src="#penguin-sledding" width="16" height="9" position="0 0 -20"></a-video>
+
       </a-nft>
       <!-- static camera that moves according to the device movemenents -->
       <a-entity camera></a-entity>
